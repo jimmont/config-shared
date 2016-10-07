@@ -127,9 +127,9 @@ export CLICOLOR=1
 # use yellow for directories
 export LSCOLORS=dxfxcxdxbxegedabagacad
 export NODE_PATH="'/usr/local/lib/node:$(npm root):$(npm root -g)'"
-export SVN_EDITOR=vim
+export SVN_EDITOR=vi
 export CLASSPATH=
-export EDITOR=vim
+export EDITOR=vi
 #if command_exists  complete ; then
 	. /usr/local/etc/bash_completion.d/git-completion.bash
 #fi
