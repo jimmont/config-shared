@@ -1,0 +1,13 @@
+# to setup symlink in ~ and do: git config --global core.excludesfile ~/.gitignore
+*.svn*
+.swp
+.*.swp
+.swo
+.*.swo
+.DS_Store
+.hg
+Thumbs.db
+Gemfile.lock
+node_modules
+#dev.*
+.sass-cache/*

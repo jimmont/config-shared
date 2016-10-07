@@ -1,0 +1,54 @@
+# see man bash for functions and escape sequences \C \e etc
+# use the read command to get key codes:
+#	use "\e" in place of leading "^["
+#	eg "^[[5~" from read becomes "\e[5~"
+# http://linuxart.com/log/archives/2005/10/13/super-useful-inputrc/
+# http://blog.theliuy.com/2011/inputrc-keyboard-mapping-config-file/
+# http://code.google.com/p/iterm2/wiki/Keybindings
+
+# ^W del word before
+# ^K del to end of line
+# ^U clear line
+# ^A or ^E beginning/end of line
+# ^R, ^S search backward or forward
+# ^D delete char
+# cd - cd to last dir
+# !! last command
+# !brew last command with brew
+# !brew:p print the last command with brew and add it to end of history (so can use !! next)
+# cd !$ !$ gives last arguments, so mkdir /blah then cd !$
+# ^cmd1^cmd2 replace cmd1 with cmd2 where cmd1 was last used
+# !1234 run command at history 1234
+# mv /path/to.{txt,html} renames to.txt -> to.html
+# cp /path/to.conf{,-old} copies to.conf -> to.conf-old
+# mv /path/to.conf{-old,} replaces/moves to.conf-old -> to.conf
+# mkdir myfolder{1,2,3} creates folders 1,2,3
+# function cdl { cd $1; ls;} function that both cd's and lists
+
+# up/down arrows search history based on what's already entered
+"\C-[[A": history-search-backward
+"\C-[[B": history-search-forward
+
+# ^+arrow left or right to move words
+"\e[1;5D": backward-word
+"\e[1;5C": forward-word
+
+set bell-style visible 
+set completion-ignore-case On
+set expand-tilde on
+set convert-meta off
+set input-meta on
+set output-meta on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+
+# ^+w does backward-kill-word (M-Rubout/alt+d) but alt+d is a hassle to setup on osx
+"\C-q": kill-word
+
+set visible-stats on
+set -o vi

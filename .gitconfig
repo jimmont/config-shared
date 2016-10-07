@@ -1,0 +1,14 @@
+[github]
+	user = user
+[user]
+	name = Some User
+	email = user@domain.com
+[core]
+	excludesfile = /Users/user/.gitignore
+	editor = vim
+[color]
+	ui = true
+[push]
+	default = simple
+[grep]
+	lineNumber = true

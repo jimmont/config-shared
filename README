@@ -1,0 +1,5 @@
+git clone https://github.com/jimmont/config-shared.git
+cd config-shared
+./symlink.sh
+
+edit any as-needed

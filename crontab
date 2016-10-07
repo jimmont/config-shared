@@ -1,0 +1,10 @@
+MAILTO=""
+# m h d m day-of-week
+# * * * * * command
+# | | | | |
+# | | | | |___day of week: 0-6, ie Sun - Sat respectively
+# | | | |___month 1-12
+# | | |___day of month 1-31
+# | |___hour 0-23
+# |___min 0-59
+0 5 * * * /usr/local/bin/brew cleanup --force && /usr/local/bin/brew update && /usr/local/bin/brew upgrade > /dev/null 2>&1
